@@ -1,0 +1,594 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-family: "Familjen Grotesk", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 200;
+	line-height: 1.5;
+	color: #ffffff;
+	background-color: #060505;
+	width: 100%;
+    height: 100%;
+}
+
+h1,
+h2
+{
+	font-family:"Familjen Grotesk", sans-serif;
+	font-size: 3.5rem;
+	margin: .5em 0;
+	text-align: center;
+}
+h2{
+	font-size: 2.5rem;
+}
+p {
+	margin: 0 0 1.5em;
+}
+
+
+/* Elements
+--------------------------------------------- */
+ul,
+ol {
+	margin: 1em 0;
+	padding: 0 0 0 2.5em;
+}
+
+/* Links
+--------------------------------------------- */
+a{
+    text-decoration: none; 
+	background-color: transparent;
+	color: inherit;
+}
+
+a,
+a:visited { 
+	color: #f9f7f7;
+}
+
+a:hover,
+a:focus,
+a:active {
+color: #ffffff !important;
+background: #545454;
+border-color: #545454 !important;
+transition: all 0.4s ease 0s;
+}
+
+/* Layout
+--------------------------------------------- */
+.site-wrapper {
+	max-width: 120rem;
+
+} 
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+.sit-header {
+    display: flex;
+	justify-content: space-between;
+    align-items: center; 
+	position: sticky;
+	top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000; 
+    z-index: 1;
+}
+
+.logo{
+    width: 75px; 
+    height: auto;
+    margin-left: 1.5rem; 
+	margin-top: 1rem;
+}
+
+/*-------nav-menu-----*/
+
+.main-nav ul {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	background-color: #000000;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 100%;
+    width: 100%; 
+}
+
+#main-nav-button {
+	display: block;
+	margin-right: 1rem;
+}
+
+#main-nav-list.toggled {
+	display: block;
+}
+
+
+.nav-menu{
+    margin-left: auto;
+    list-style: none;
+    color: #ffffff;
+	margin-right: 1.5rem;
+}
+
+.nav-menu li a {
+    color: #ffffff; 
+}
+
+
+@media (min-width: 50em) {
+	
+	#main-nav-list.toggled {
+		position: static;
+		display: block;	
+		display: flex;	
+		justify-content: space-between;
+		margin-right: 2rem;
+	}
+
+	.main-nav{
+		margin-right: 1rem;
+	}
+
+
+	#main-nav-button {
+		display: none;
+	}
+
+
+    .nav-menu li {
+        margin-left: 20px;
+    }
+
+    .nav-menu li:first-child {
+        margin-left: 0;
+    }
+}
+
+
+/* Main
+--------------------------------------------- */
+.site-main {
+    text-align: justify;
+}
+
+/* -------- Banner Section -----------------*/
+.banner {
+	position: relative;
+}
+
+.banner h1 {
+	position: absolute;
+	bottom: 30%;
+	right: 20%;
+	padding: 20px;
+	color: #ffffff;
+}
+
+.banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+/*------History section-------*/
+
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center; 
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 3rem;
+}
+
+.history h2,
+.history p,
+.history blockquote {
+    width: 100%;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 50em) {
+    .history {
+        grid-template-columns: 1fr 2fr;
+        gap: 7rem;
+        margin-top: 10rem;
+        margin-left: 5rem;
+        margin-right: 3rem;
+    }
+    .history h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    .history p {
+        margin-left: 7rem;
+    }
+}
+
+
+/*------Culture section-------*/
+.culture{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:9rem;
+    margin-left: 5rem;
+    margin-right: 3rem;
+	padding: 4rem 0 4rem 0;;
+}
+
+.culture article{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.culture img{
+	width: 320px;
+	height: auto;
+}
+
+.culture-img-2{
+	margin-top: 1rem;
+}
+
+.culture h2{
+	align-content: flex-start;
+}
+
+@media screen and (min-width: 50em){
+					
+	.culture h2{
+		margin-right: 2rem;
+	}
+.culture img{
+	position: relative;
+	width: 400px;
+	height: auto;
+}
+.culture-img-2{
+	top: -4rem; 
+	left: -2rem; 
+}
+.culture h2{
+	margin-right: 2rem;
+}
+}
+
+/*------Culture section-------*/
+.contact{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #ffffff;
+	color: #000000;
+	margin-top: 3rem;
+	padding: 4rem 0 4rem 0;
+}
+
+.contact form {
+	width: 30%; 
+	padding: 0 10px; 
+	margin: 0;
+}
+
+.contact p{
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+@media screen and (min-width: 50em){
+					
+	.contact {
+		display: flex; 
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	.contact form{
+			padding: 0 100px; 
+	}
+
+	.contact h2{
+		margin-left: 7rem;
+		margin-right: 2rem ;
+	}
+	
+	.contact p{
+		margin-right: 8rem;
+		margin-left: 1rem;
+	}
+}
+
+
+/*------Culture section-------*/
+.wildlife {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	text-align: center;
+}
+.wildlife img{
+	width: 200px;
+	margin: 0 auto;
+}
+
+
+@media screen and (min-width: 50em){
+				
+	.wildlife img{
+		margin: auto;
+		justify-content: center;
+		gap: 1rem;
+	}
+}
+	
+	
+/* Footer
+--------------------------------------------- */
+.footer {
+	text-align: center;
+	border-top:1.5px solid #f9f7f7;
+	padding-top: 3rem;
+}
+
+.icons{
+	fill: currentColor;
+	margin-right: 1rem;
+
+}
+
+
+
+
+
+/*------culture page-----------*/
+
+.cultur-site-main,
+.wildlife-site-main,
+.history-site-main{
+	color: #000000;
+	background-color: #ffffff;	
+}
+
+.culture-banner,
+.wildlife-banner,
+.history-banner{
+	text-align: justify;
+	align-content: stretch;
+	justify-content: center;
+	background-color: rgb(192, 189, 189);
+}
+
+.culture-banner p,
+.wildlife-banner p,
+.history-banner p{
+	margin: 0 1.5rem 1rem 1.5rem;
+
+}
+@media (min-width: 50em) {
+
+	.culture-banner,
+	.wildlife-banner,
+	.history-banner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.culture-banner h1,
+	.history-banner h1 {
+		margin-right: auto;
+		margin-left: 7rem ;
+	}
+	
+	.culture-banner img,
+	.wildlife-banner img,
+	.history-banner img{
+		height: 740px;
+	}
+}
+
+.culture-video{
+	margin-top: 2rem;
+	text-align: center;
+	border-top: 1.5px solid #121111;
+	border-bottom: 1.5px solid #121111;
+}
+
+.culture-example,
+.wildlife-example {
+    text-align: center;
+}
+.culture-example img{
+	width: 320px;
+	height: auto;
+}
+
+.culture-example-1,
+.culture-example-2,
+.culture-example-3{
+	width: 300px;
+	display:inline-block;
+	background-color: rgb(192, 189, 189);
+	margin-top: 2rem;
+}
+
+@media (min-width: 50em) {
+	.culture-example {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+.culture-example-1,
+.culture-example-2,
+.culture-example-3{
+	margin-right: 1rem;
+}
+}
+
+
+/*-----Wildlife page----------------*/
+
+.wildlife-example{
+	margin-top: 2rem;
+	margin-bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.wildlife-banner h1{
+	margin-left: 7rem;
+}
+
+.wildlife-example-1,
+.wildlife-example-2,
+.wildlife-example-3{
+	border-top: 1.5px solid #121111;
+}
+
+
+.wildlife-example img{
+	width: 500px;
+}
+
+
+@media (min-width: 50em) {
+
+	.wildlife-example{
+		margin-top: 2rem;
+		justify-content: space-between;
+		margin-bottom: 0;
+	}
+	
+	.wildlife-banner h1{
+		margin-left: 7rem;
+	}
+	
+	.wildlife-example-1,
+	.wildlife-example-2,
+	.wildlife-example-3{
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+	}
+	
+	.wildlife-example img{
+		width: 500px;
+	}
+	
+	.wildlife-example-2{
+		flex-direction: row-reverse;
+		margin-left: 7rem;
+	}
+	
+	.wildlife-example-1,
+	.wildlife-example-3{
+	margin-right: 7rem;
+	}
+
+}
+
+
+/*-----History page----------------*/
+.history-example{
+    text-align: center;
+}
+.history-example img{
+	width: 320px;
+	height: auto;
+}
+
+.history-example-1,
+.history-example-2,
+.history-example-3{
+	width: 300px;
+	display:inline-block;
+	background-color: rgb(192, 189, 189);
+	margin-top: 2rem;
+}
+
+@media (min-width: 50em) {
+	.history-example {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+.history-example-1,
+.history-example-2,
+.history-example-3{
+	margin-right: 1rem;
+}
+}
+
+
+/*--------credit page---------*/
+
+.credits-main{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+
+.credits-main table th{
+	border-bottom: 1.5px solid #f9f7f7;;
+}
+
+
+.credits-main {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.credits-main td, .credits-main th {
+    padding: 8px;
+    border: none; 
+	margin-bottom: 10px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.credits-table tr:last-child {
+    border-bottom: none; 
+}
