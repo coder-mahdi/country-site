@@ -9,3 +9,18 @@ button.addEventListener('click', function() {
         banner.classList.toggle('toggled');
     }
 })
+
+function checkScreenSize() {
+    if (window.innerWidth >= 50 * 16) { // 50em in pixels
+        links.classList.add('toggled');
+        button.style.display = 'none';
+    } else {
+        links.classList.remove('toggled');
+        button.style.display = 'block';
+    }
+}
+
+checkScreenSize();
+
+// Add event listener for window resize
+window.addEventListener('resize', checkScreenSize);
