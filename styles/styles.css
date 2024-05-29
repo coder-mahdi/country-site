@@ -195,6 +195,7 @@ transition: all 0.4s ease 0s;
 	right: 20%;
 	padding: 20px;
 	color: #ffffff;
+	backdrop-filter: contrast(0.5);
 }
 
 .banner img {
@@ -473,10 +474,6 @@ transition: all 0.4s ease 0s;
 	align-items: center;
 	justify-content: center;
 	margin-top: 1rem;
-}
-
-.wildlife-banner h1{
-	margin-left: 7rem;
 }
 
 .wildlife-example-1,
